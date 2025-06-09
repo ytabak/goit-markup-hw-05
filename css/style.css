@@ -542,7 +542,9 @@ p {
   margin-bottom: 16px;
 }
 .cross-btn {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   right: 24px;
   top: 24px;
@@ -550,8 +552,8 @@ p {
   height: 24px;
   border-radius: 50%;
   background-color: #e7e9fc;
-  border: 1px solid #2e2f42;
-  padding: 8px;
+  border: 1px solid #d4d4dd;
+  outline: none;
 }
 
 .cross-btn:checked {
@@ -572,11 +574,13 @@ p {
   position: absolute;
   left: 16px;
   top: 12px;
+  /* top: 50%;
+  transform: translateY(-50%); */
 }
 
-.input-name,
-.input-phone,
-.input-email {
+.input-email-wrapper,
+.input-phone-wrapper,
+.input-name-wrapper {
   position: relative;
 }
 
@@ -588,6 +592,7 @@ p {
   color: #8e8f99;
   display: inline-flex;
   align-items: center;
+  margin-bottom: 24px;
 }
 
 .privacy-policy-link {
@@ -595,6 +600,7 @@ p {
   text-decoration: underline;
   text-decoration-skip-ink: none;
   color: #4d5ae5;
+  margin-left: 4px;
 }
 
 .check-element {
@@ -631,6 +637,7 @@ label {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 8px;
 }
 
 .contacts-form textarea {
@@ -639,13 +646,21 @@ label {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 16px;
+}
+.input-name,
+.input-phone,
+.input-email {
+  padding-left: 38px;
+  padding-right: 16px;
 }
 
-.name-label:focus,
-.phone-label:focus-within,
-.email-label:focus-within,
-.textarea-label:focus-within {
+.input-name:focus,
+.input-phone:focus,
+.input-email:focus,
+.textarea:focus {
   border-color: #4d5ae5;
+  outline: none; /* Убирает стандартное выделение браузера */
 }
 
 .form-btn {
@@ -680,4 +695,8 @@ label {
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
+  padding-left: 16px;
+  padding-top: 8px;
+  padding-right: 16px;
+  padding-bottom: 8px;
 }
