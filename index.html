@@ -26,20 +26,14 @@
                     <li><a class="header-nav-item" href="">Portfolio</a></li>
                     <li><a class="header-nav-item" href="">Contacts</a></li>
                 </ul>
-               
-                <!-- <ul class="header-nav">
-                                <li><a class="header-nav-item" href="./index.html">Studio</a></li>
-                                <li><a class="header-nav-item" href="#portfolio">Portfolio</a></li>
-                                <li><a class="header-nav-item" href="#address">Contacts</a></li>
-                            </ul> -->
             </nav>
             
-                <address class="header-adress" id="address">
-                    <ul class="container-address-items">
-                        <li><a class="header-adress" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-                        <li><a class="header-adress" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
-                    </ul>
-                </address>
+            <address class="header-adress" id="address">
+                <ul class="container-address-items">
+                    <li><a class="header-adress" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                    <li><a class="header-adress" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+                </ul>
+            </address>
             
         </div>
     </header>
@@ -347,6 +341,64 @@
     </section>
 
 </main>
+/* - - - - Modal - - - - */
+<div class="modal-overlay is-open">
+    <div class="contacts-form-wrapper">
+        <button class="cross-btn" type="button">
+            <svg class="icon-cross" width="8" height="8">
+                <use href="./images/icons.svg#icon-cross-black">
+                </use>
+            </svg>
+        </button>
+        <p class="leave-contacts">Leave your contacts and we will call you back</p>
+    
+        <form class="contacts-form">
+           
+            <label class="name-label"  for="name">Name</label>
+                <input  class="input-name"  type="text" id="name" name="name" />
+                <svg class="icon-name" width="8" height="8">
+                    <use href="./images/icons.svg#icon-name">
+                    </use>
+                </svg>
+    
+    
+            <label class="phone-label" for="phone">Phone</label>
+                <input class="input-phone"  type="tel" id="phone" name="phone" />
+                <svg class="icon-phone" width="8" height="8">
+                    <use href="./images/icons.svg#icon-phone">
+                    </use>
+                </svg>
+    
+            <label class="email-label" for="email">Email</label>
+                <input class="input-email" type="email" id="email" name="email" />
+                <svg class="icon-email" width="8" height="8">
+                    <use href="./images/icons.svg#icon-email">
+                    </use>
+                </svg>
+    
+            <label  class="textarea-label" for="comment">Comment</label>
+                <textarea  class="textarea" id="comment" name="comment" placeholder="Text input"></textarea>
+    
+                <input class="checkbox-input visually-hidden" type="checkbox" name="privacy-policy" value="accepted" id="checkbox-input" />
+                <label for="checkbox-input"  class="privacy-text">
+                    <span class="check-element">
+                        <svg class="" width="10" height="8">
+                            <use href="./images/icons.svg#icon-check-privacy">
+                            </use>
+                        </svg>
+                        </span>
+                    I accept the terms and conditions of the
+                <a href="" class="privacy-policy-link">Privacy Policy</a>
+            </label>
+    
+            <button class="form-btn" type="submit">Send</button>
+        </form>
+    </div>
+</div>
+
+
+                                          <!-- Footer -->
+
 <footer class="footer">
     <div class="container footer-wrapper">
         <div class="footer-logo-wrapper">
@@ -391,6 +443,7 @@
         </div>
     </div>
 </footer>
+
 
 
 </body>
