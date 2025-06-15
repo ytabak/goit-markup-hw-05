@@ -531,6 +531,10 @@ p {
   padding-left: 16px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
 }
 
 .email-input::placeholder {
