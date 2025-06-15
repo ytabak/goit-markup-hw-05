@@ -723,7 +723,7 @@ p {
 .check-element {
   width: 16px;
   height: 16px;
-  display: inline-block;
+  display: inline-flex;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   margin-right: 8px;
