@@ -658,6 +658,7 @@ p {
   padding: 0;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 
 .cross-btn:focus,
@@ -665,7 +666,9 @@ p {
   background-color: #404bbf;
   border: none;
 }
-.cross-btn:active .icon-cross {
+
+.cross-btn:hover .icon-cross,
+.cross-btn:focus .icon-cross {
   fill: #ffffff;
 }
 
@@ -674,13 +677,11 @@ p {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.name-label {
+.label {
   margin-bottom: 4px;
 }
 
-.icon-name,
-.icon-phone,
-.icon-email {
+.icon-modal {
   position: absolute;
   left: 16px;
   top: 50%;
@@ -688,18 +689,12 @@ p {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-email-wrapper,
-.input-phone-wrapper,
-.input-name-wrapper {
+.input-wrapper {
   margin-bottom: 8px;
 }
 
-.input-name:focus + .name-label .icon-name,
-.input-name-wrapper:focus-within .icon-name,
-.input-phone:focus + .name-label .icon-phone,
-.input-phone-wrapper:focus-within .icon-phone,
-.input-email:focus + .name-label .icon-email,
-.input-email-wrapper:focus-within .icon-email {
+.input-modal:focus + .name-label .icon-modal,
+.input-wrapper:focus-within .icon-modal {
   fill: #4d5ae5;
 }
 
@@ -777,7 +772,7 @@ input:checked + label .check-element {
   border-radius: 4px;
   outline: transparent;
   background-color: transparent;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 8px 16px;
 }
 
@@ -788,9 +783,7 @@ input:checked + label .check-element {
 .textarea::placeholder {
 }
 
-.input-name,
-.input-phone,
-.input-email {
+.input-modal {
   padding-left: 38px;
   padding-right: 16px;
   width: 100%;
@@ -803,9 +796,7 @@ input:checked + label .check-element {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-name:focus,
-.input-phone:focus,
-.input-email:focus,
+.input-modal:focus,
 .textarea:focus {
   border-color: #4d5ae5;
   outline: none; /* Убирает стандартное выделение браузера */
